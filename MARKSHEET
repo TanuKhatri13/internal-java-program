@@ -1,0 +1,20 @@
+import javax.swing.*;
+public class Marksheet {
+    Marksheet(){
+    f=new JFrame();
+    String data[][]={ {"1","Tanu","Khatri","81"},
+                          {"2","Aarti","Balepuriya","82"},
+                          {"3","Priyanka","Parmar","80"},
+                          {"4","Pinki","Dhakad","80"}};
+    String column[]={"Enr","FirstName","LastName","Marks"};
+    JTable jt=new JTable(data,column);
+    jt.setBounds(30,50,200,300);
+    JScrollPane sp=new JScrollPane(jt);
+    f.add(sp);
+    f.setSize(500,500);
+    f.setVisible(true);
+}
+public static void main(String[] args) {
+    new Marksheet();
+}
+}
